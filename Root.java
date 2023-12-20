@@ -1,7 +1,7 @@
 package internship;
 /*
  * 这是一个Root类，用于处理管理员模式的操作
- * @author 网络s1801-郭子云-1811660103
+ * @author 
  */
 import java.util.Iterator;
 import java.util.Map;
