@@ -1,20 +1,20 @@
 package internship;
 /*
- * ÕâÊÇÒ»¸öBankÀà£¬ÓÃÓÚ´¦ÀíÍøÉÏÒøĞĞµÄÓÃ»§µÇÂ¼
- * @author ÍøÂçs1801-¹ù×ÓÔÆ-1811660103
+ * è¿™æ˜¯ä¸€ä¸ªBankç±»ï¼Œç”¨äºå¤„ç†ç½‘ä¸Šé“¶è¡Œçš„ç”¨æˆ·ç™»å½•
+ * @author 
  */
 import java.util.Scanner;
 
 public class Bank {
 	 Scanner input = new Scanner(System.in);
-	    User user;							//ÊµÀı»¯¶ÔÏó
+	    User user;							//å®ä¾‹åŒ–å¯¹è±¡
 	    DBUtil dbUtil = new DBUtil();
 
-	    public Bank(){						//ÒøĞĞÏµÍ³Èë¿Ú
+	    public Bank(){						//é“¶è¡Œç³»ç»Ÿå…¥å£
 	        start();
 	    }
 
-	    public void start(){				//ÓÃ»§Ä£Ê½Ñ¡Ôñº¯Êı
+	    public void start(){				//ç”¨æˆ·æ¨¡å¼é€‰æ‹©å‡½æ•°
 	        Root root = new Root(user,dbUtil);
 	        Customers customers = new Customers(user,dbUtil);
 	        int key2;
@@ -22,26 +22,26 @@ public class Bank {
 	            enterBank();
 	            key2 = input.nextInt();
 	            if (key2 == 1){
-	            	customers .initCustomers();		//½øÈëÆÕÍ¨ÓÃ»§Ä£Ê½
+	            	customers .initCustomers();		//è¿›å…¥æ™®é€šç”¨æˆ·æ¨¡å¼
 	            }
 	            else if (key2 == 2) {
-	                root.initRoot();				//½øÈë¹ÜÀíÔ±Ä£Ê½
+	                root.initRoot();				//è¿›å…¥ç®¡ç†å‘˜æ¨¡å¼
 	            }
 	            else if (key2 == 0) {
-	                System.out.println("\n¸ĞĞ»ÄúµÄÊ¹ÓÃ£¬ÔÙ¼û£¡");
+	                System.out.println("\næ„Ÿè°¢æ‚¨çš„ä½¿ç”¨ï¼Œå†è§ï¼");
 	                break;
 	            }
 	        } 
 	    }
 
-	    public void enterBank(){				//ÒøĞĞÏµÍ³Èë¿Ú½çÃæ
-	        System.out.println("ÄúÒÑ½øÈëGZYÒøĞĞ¹ÜÀíÏµÍ³£¬ÇëÑ¡ÔñÒª½øÈëµÄÄ£Ê½£º");
+	    public void enterBank(){				//é“¶è¡Œç³»ç»Ÿå…¥å£ç•Œé¢
+	        System.out.println("æ‚¨å·²è¿›å…¥xxxé“¶è¡Œç®¡ç†ç³»ç»Ÿï¼Œè¯·é€‰æ‹©è¦è¿›å…¥çš„æ¨¡å¼ï¼š");
 	        System.out.println("-------------------------");
-	        System.out.println("	1.ÓÃ»§Ä£Ê½");
-	        System.out.println("	2.¹ÜÀíÔ±Ä£Ê½");
-	        System.out.println("	0.ÍË³öÏµÍ³");
+	        System.out.println("	1.ç”¨æˆ·æ¨¡å¼");
+	        System.out.println("	2.ç®¡ç†å‘˜æ¨¡å¼");
+	        System.out.println("	0.é€€å‡ºç³»ç»Ÿ");
 	        System.out.println("-------------------------");
-	        System.out.print("ÇëÑ¡Ôñ£º");
+	        System.out.print("è¯·é€‰æ‹©ï¼š");
 	    }
  
 }
