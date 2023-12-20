@@ -1,64 +1,64 @@
 package internship;
 /*
- * ÕâÊÇÒ»¸öUserÀà£¬ÓÃÓÚ¶¨ÒåÕË»§¶ÔÏó
- * @author ÍøÂçs1801-¹ù×ÓÔÆ-1811660103
+ * è¿™æ˜¯ä¸€ä¸ªUserç±»ï¼Œç”¨äºå®šä¹‰è´¦æˆ·å¯¹è±¡
+ * @author 
  */
 public class User {
-	public String cardId;			//ÒøĞĞ¿¨ºÅ
-	public String cardPwd;			//ÒøĞĞ¿¨ÃÜÂë
-	public String userName;			//ÕË»§Ãû
-	public String call;				//ÊÖ»úºÅÂë
-	public double account;			//´æ¿î¶î
+	public String cardId;			//é“¶è¡Œå¡å·
+	public String cardPwd;			//é“¶è¡Œå¡å¯†ç 
+	public String userName;			//è´¦æˆ·å
+	public String call;				//æ‰‹æœºå·ç 
+	public double account;			//å­˜æ¬¾é¢
 	 
-	public String getCardId() {					//»ñÈ¡ÒøĞĞ¿¨ºÅ
+	public String getCardId() {					//è·å–é“¶è¡Œå¡å·
 		return cardId;
 	}
  
  
-	public void setCardId(String cardId) {		//Ğ´ÈëÒøĞĞ¿¨ºÅ
+	public void setCardId(String cardId) {		//å†™å…¥é“¶è¡Œå¡å·
 		this.cardId = cardId;
 	}
  
  
-	public String getCardPwd() {				//»ñÈ¡ÒøĞĞ¿¨ÃÜÂë
+	public String getCardPwd() {				//è·å–é“¶è¡Œå¡å¯†ç 
 		return cardPwd;
 	}
  
  
-	public void setCardPwd(String cardPwd) {	//Ğ´ÈëÒøĞĞ¿¨ÃÜÂë
+	public void setCardPwd(String cardPwd) {	//å†™å…¥é“¶è¡Œå¡å¯†ç 
 		this.cardPwd = cardPwd;
 	}
  
 
-	public String getUserName() {				//»ñÈ¡ÕË»§Ãû
+	public String getUserName() {				//è·å–è´¦æˆ·å
 		return userName;
 	}
  
  
-	public void setUserName(String userName) {	//Ğ´ÈëÕË»§Ãû
+	public void setUserName(String userName) {	//å†™å…¥è´¦æˆ·å
 		this. userName =  userName;
 	}
  
  
-	public String getCall() {					//»ñÈ¡µç»°ºÅÂë
+	public String getCall() {					//è·å–ç”µè¯å·ç 
 		return call;
 	}
  
  
-	public void setCall(String call) {			//Ğ´Èëµç»°ºÅÂë
+	public void setCall(String call) {			//å†™å…¥ç”µè¯å·ç 
 		this.call = call;
 	}
 	
 	
-	public double getAccount(){					//»ñÈ¡´æ¿î¶î
+	public double getAccount(){					//è·å–å­˜æ¬¾é¢
 		return account;
 	}
 	
-	public void setAccount(double account){		//Ğ´Èë´æ¿î¶î
+	public void setAccount(double account){		//å†™å…¥å­˜æ¬¾é¢
 		this.account=account;
 	}
 	
-	public User(String cardId,String cardPwd,String userName,String call,double account){		//Ğ´ÈëÕû¸öÕË»§¶ÔÏó
+	public User(String cardId,String cardPwd,String userName,String call,double account){		//å†™å…¥æ•´ä¸ªè´¦æˆ·å¯¹è±¡
         setCardId(cardId);
         setCardPwd(cardPwd);
         setUserName(userName);
