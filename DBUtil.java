@@ -1,53 +1,53 @@
 package internship;
 /*
- * ÕâÊÇÒ»¸öDBUtilÀà£¬¸ÃÀàÓÃÓÚÄ£ÄâÒøĞĞÏµÍ³ÖĞµÄÕË»§ÈËĞÅÏ¢£¬Ïàµ±ÓÚÊı¾İ¿âµÄ¹¦ÄÜ¡£
- * @author ÍøÂçs1801-¹ù×ÓÔÆ-1811660103
+ * è¿™æ˜¯ä¸€ä¸ªDBUtilç±»ï¼Œè¯¥ç±»ç”¨äºæ¨¡æ‹Ÿé“¶è¡Œç³»ç»Ÿä¸­çš„è´¦æˆ·äººä¿¡æ¯ï¼Œç›¸å½“äºæ•°æ®åº“çš„åŠŸèƒ½ã€‚
+ * @author 
  */
 import java.util.HashMap;
 import java.util.Iterator;
 
 public class DBUtil {
-	 HashMap<String,User> map = new HashMap<String, User>();		//´´½¨HashMap¼¯ºÏ
-	    public DBUtil(){							//¿Õ²Î¹¹Ôìº¯Êı
+	 HashMap<String,User> map = new HashMap<String, User>();		//åˆ›å»ºHashMapé›†åˆ
+	    public DBUtil(){							//ç©ºå‚æ„é€ å‡½æ•°
 
 	    }
 	    
-	    public HashMap<String, User> getUsers(){	//»ñÈ¡map¼¯ºÏ
+	    public HashMap<String, User> getUsers(){	//è·å–mapé›†åˆ
 	        return map;
 	    }
 
-	    public DBUtil(String cardId, User user){	//½«Õû¸öÕË»§¶ÔÏóĞ´Èë¼¯ºÏ
+	    public DBUtil(String cardId, User user){	//å°†æ•´ä¸ªè´¦æˆ·å¯¹è±¡å†™å…¥é›†åˆ
 	        map.put(cardId,user);
 	    }
 
-	    public void addUser(String cardId,User user){	//Ìí¼ÓÕË»§¶ÔÏóµ½¼¯ºÏÖĞ
+	    public void addUser(String cardId,User user){	//æ·»åŠ è´¦æˆ·å¯¹è±¡åˆ°é›†åˆä¸­
 	        map.put(cardId,user);
 	    }
 	    
-	    public void getAllUsers(){					//²éÑ¯ËùÓĞÕË»§
-	        Iterator<String> iterator = map.keySet().iterator();	//µü´úmapÖĞ¼üµÄ¼¯ºÏ
-	        System.out.println("************************************ÓÃ»§ÁĞ±í****************************************");
+	    public void getAllUsers(){					//æŸ¥è¯¢æ‰€æœ‰è´¦æˆ·
+	        Iterator<String> iterator = map.keySet().iterator();	//è¿­ä»£mapä¸­é”®çš„é›†åˆ
+	        System.out.println("************************************ç”¨æˆ·åˆ—è¡¨****************************************");
 	        while (iterator.hasNext()){
 	            Object key = iterator.next();
 	            User value_all = map.get(key);
-	            String format = "ÒøĞĞ¿¨ºÅ£º%-8sÒøĞĞ¿¨ÃÜÂë£º%-8sÕË»§Ãû£º%-8sµç»°ºÅÂë£º%-8sÕË»§Óà¶î£º%-8f\n";		//´´½¨¸ñÊ½»¯µÄ×Ö·û´®ÒÔ¼°Á¬½Ó¶à¸ö×Ö·û´®¶ÔÏó
-	            System.out.printf(format,value_all.getCardId(),value_all.getCardPwd(),			//´òÓ¡Êä³ö
+	            String format = "é“¶è¡Œå¡å·ï¼š%-8sé“¶è¡Œå¡å¯†ç ï¼š%-8sè´¦æˆ·åï¼š%-8sç”µè¯å·ç ï¼š%-8sè´¦æˆ·ä½™é¢ï¼š%-8f\n";		//åˆ›å»ºæ ¼å¼åŒ–çš„å­—ç¬¦ä¸²ä»¥åŠè¿æ¥å¤šä¸ªå­—ç¬¦ä¸²å¯¹è±¡
+	            System.out.printf(format,value_all.getCardId(),value_all.getCardPwd(),			//æ‰“å°è¾“å‡º
 	            		value_all.getUserName(),value_all.getCall(),value_all.getAccount());
 	        }
 	    }
 
-	    public void getSingleUser(Object key){		//²éÑ¯Ö¸¶¨ÕË»§
-	        User value_single = map.get(key);		//»ñÈ¡Ö¸¶¨¼üËù¶ÔÓ¦µÄµÄÕË»§¶ÔÏó
-	        System.out.println("*******ÓÃ»§ĞÅÏ¢*******");
-	        System.out.println("ÒøĞĞ¿¨ºÅ£º"+key);
-	        System.out.println("ÒøĞĞ¿¨ÃÜÂë£º"+value_single.getCardPwd());
-	        System.out.println("ÕË»§Ãû£º"+value_single.getUserName());
-	        System.out.println("µç»°ºÅÂë£º"+value_single.getCall());
-	        System.out.println("ÕË»§Óà¶î£º"+value_single.getAccount());
+	    public void getSingleUser(Object key){		//æŸ¥è¯¢æŒ‡å®šè´¦æˆ·
+	        User value_single = map.get(key);		//è·å–æŒ‡å®šé”®æ‰€å¯¹åº”çš„çš„è´¦æˆ·å¯¹è±¡
+	        System.out.println("*******ç”¨æˆ·ä¿¡æ¯*******");
+	        System.out.println("é“¶è¡Œå¡å·ï¼š"+key);
+	        System.out.println("é“¶è¡Œå¡å¯†ç ï¼š"+value_single.getCardPwd());
+	        System.out.println("è´¦æˆ·åï¼š"+value_single.getUserName());
+	        System.out.println("ç”µè¯å·ç ï¼š"+value_single.getCall());
+	        System.out.println("è´¦æˆ·ä½™é¢ï¼š"+value_single.getAccount());
 	        System.out.println("*********************");
 	    }
 
-	    public void delete(Object key){				//É¾³ıÖ¸¶¨ÕË»§
+	    public void delete(Object key){				//åˆ é™¤æŒ‡å®šè´¦æˆ·
 	        map.remove(key);						
 	    }
 
